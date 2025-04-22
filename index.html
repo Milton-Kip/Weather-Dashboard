@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Dashboard</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for a location...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <section class="current-weather">
+                <div class="weather-info">
+                    <h2 id="location">New York, US</h2>
+                    <p id="date">Loading...</p>
+                    <div class="temp-container">
+                        <img id="weather-icon" src="/placeholder.svg" alt="Weather icon">
+                        <h3 id="temperature">--°C</h3>
+                    </div>
+                    <p id="description">--</p>
+                    <div class="details">
+                        <div class="detail">
+                            <i class="fas fa-wind"></i>
+                            <span id="wind">-- km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity">--%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            <span id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast items will be generated here -->
+                </div>
+            </section>
+
+            <section class="map-container">
+                <h2>Weather Map</h2>
+                <div id="map"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created with <i class="fas fa-heart"></i> | Kipyegon Milton | andydev.kipyegon@gmail.com</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
